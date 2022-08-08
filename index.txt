@@ -19,6 +19,7 @@
     <h4 class="bg-dark text-muted">
         <span class="text-danger">NOTA:</span> SE O ROVER NÃO ESTIVER VISÍVEL, PRESSIONE QUALQUER TECLA
     </h4>
+    
     <script src="main.js"></script>
 </body>
 </html>
