@@ -1,22 +1,42 @@
-var canvas = document.getElementById('myCanvas');
-var ctx = canvas.getContext("2d");
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext("2d");
 
 const roverWidth = 100;
 const roverHeight = 90;
 
-const backgroundImage = 'mars.jpg';
-const roverImage = 'rover.png';
+const backgroundImage = "mars.jpg";
+const roverImage = "rover.png";
 
-var roverX = 10;
-var roverY = 10;
+const roverX = 10;
+const roverY = 10;
 
 var backgroundImgTag, roverImgTag;
 
 function add() {
     backgroundImgTag = new Image();
     backgroundImgTag.src = backgroundImage;
-    backgroundImgTag.onload = uploadBackground();
-
+    backgroundImgTag.onload = uploadBackground;
+    
     roverImgTag = new Image();
-    roverImgTag.onload = uploadRover();
+    roverImgTag.src = roverImage;
+    roverImgTag.onload = uploadRover;
+}
+
+function uploadBackground() {
+    ctx.drawImage(backgroundImgTag, 0, 0, canvas.width, canvas.height);
+}
+
+function uploadRover() {
+    ctx.drawImage(roverImgTag, roverX, roverY, roverWidth, roverHeight);
+}
+
+window.addEventListener("keydown", keyDown);
+
+function keyDown (e) {
+    const keyPressed = e.keyCode;
+    console.log(keyPressed);
+    if(keyPressed == 38) {
+        up();
+        console.log('cima');
+    }
 }
