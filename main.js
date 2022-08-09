@@ -41,31 +41,16 @@ function keyDown (e) {
     console.log(e.key + " -> " + keyPressed);
     if(keyPressed == 37) {
         // esquerda
-        if (roverX > 0) {
-            roverMove(-passo, 0);
-        }
+        console.log('esquerda');
     } else if (keyPressed == 38) {
         // cima
-        if (roverY > 0) {
-            roverMove(0, -passo);
-        }
+        console.log('cima');
     } else if (keyPressed == 39) {
         // direita
-        if (roverX <= borderRight) {
-            roverMove(passo, 0);
-        }
+        console.log('direita');
     } else if (keyPressed == 40) {
         // baixo
-        if (roverY <= borderBottom) {
-            roverMove(0, passo);
-        }
+        console.log('baixo');
     }
 }
 
-function roverMove (x, y) {
-    roverX += x;
-    roverY += y;
-
-    uploadBackground();
-    uploadRover();
-}
