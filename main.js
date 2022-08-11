@@ -4,14 +4,14 @@ const ctx = canvas.getContext("2d");
 const roverWidth = 100;
 const roverHeight = 90;
 
+var roverX = 10;
+var roverY = 10;
+
 const borderRight = canvas.width - roverWidth;
 const borderBottom = canvas.height - roverHeight;
 
 const backgroundImage = "mars.jpg";
 const roverImage = "rover.png";
-
-var roverX = 10;
-var roverY = 10;
 
 var backgroundImgTag, roverImgTag;
 
